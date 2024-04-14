@@ -11,7 +11,6 @@ import cookieParser from "cookie-parser";
 import 'express-async-errors'
 import api from "./api/index.api";
 import noteRouter from "../src/routes/note.route"
-
 config();
 
 const app = express();
