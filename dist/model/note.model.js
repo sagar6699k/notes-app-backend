@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Note = void 0;
+const mongoose_1 = require("mongoose");
+const noteSchema = new mongoose_1.Schema({
+    title: { type: String, required: true },
+    detail: { type: String, default: "" },
+}, {
+    collection: "notes",
+    timestamps: true,
+});
+const Note = (0, mongoose_1.model)("Note", noteSchema);
+exports.Note = Note;
+//# sourceMappingURL=note.model.js.map

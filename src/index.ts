@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import app from './src/app';
+import app from './app';
 import * as fs from 'fs';
 import { config } from "dotenv";
 config();

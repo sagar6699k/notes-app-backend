@@ -25,7 +25,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true, limit: "30mb" }));
 
-app.use("/api/v1", api);
+app.use("/", api);
 app.use("/api/", noteRouter);
 
 app.use("*", notFoundMiddleware);
