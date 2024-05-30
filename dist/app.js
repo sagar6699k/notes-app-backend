@@ -25,6 +25,8 @@ app.use((0, helmet_1.default)());
 app.use(helmet_1.default.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use((0, cookie_parser_1.default)());
 app.use((0, cors_1.default)(corsOptions_1.corsOptions));
+// Handle preflight requests for all routes
+app.options('*', (0, cors_1.default)(corsOptions_1.corsOptions));
 app.use(express_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true, limit: "30mb" }));
 app.use("/", index_api_1.default);
