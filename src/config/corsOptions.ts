@@ -2,6 +2,7 @@ import cors from "cors";
 const allowedOrigins: string[] = [
   "http://localhost:3000",
   "http://192.168.1.2:3000",
+  "https://notes-app-frontend-sigma.vercel.app/"
 ];
 
 export const corsOptions: cors.CorsOptions = {
