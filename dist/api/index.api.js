@@ -11,4 +11,3 @@ router.get("/", (req, res) => {
     });
 });
 exports.default = router;
-//# sourceMappingURL=index.api.js.map

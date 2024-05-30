@@ -18,4 +18,3 @@ exports.corsOptions = {
     credentials: true,
     optionsSuccessStatus: 200,
 };
-//# sourceMappingURL=corsOptions.js.map

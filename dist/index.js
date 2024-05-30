@@ -17,4 +17,3 @@ mongoose_1.default.connection.once("open", () => {
 mongoose_1.default.connection.on("error", (err) => {
     console.log(`${err.no}: ${err.code}\t${err.syscall}\t${err.hostname}`);
 });
-//# sourceMappingURL=index.js.map

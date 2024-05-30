@@ -11,4 +11,3 @@ const noteSchema = new mongoose_1.Schema({
 });
 const Note = (0, mongoose_1.model)("Note", noteSchema);
 exports.Note = Note;
-//# sourceMappingURL=note.model.js.map

@@ -76,4 +76,3 @@ const searchNotes = async (req, res) => {
     }
 };
 exports.searchNotes = searchNotes;
-//# sourceMappingURL=note.controller.js.map

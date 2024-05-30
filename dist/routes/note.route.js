@@ -10,4 +10,3 @@ router.put("/notes/:id", note_controller_1.updateNote);
 router.delete("/notes/:id", note_controller_1.deleteNote);
 router.post("/notes/search", note_controller_1.searchNotes);
 exports.default = router;
-//# sourceMappingURL=note.route.js.map

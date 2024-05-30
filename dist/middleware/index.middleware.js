@@ -19,17 +19,17 @@ const errorHandlerMiddleware = (err, req, res, next) => {
     if (err instanceof CustomAPIError) {
         return res
             .status(defaultError.statusCode)
-            .json({ message: defaultError.msg, sucess: false });
+            .json({ message: defaultError.msg, success: false });
     }
     if (err.name === "ValidationError") {
         defaultError.statusCode = 500;
         defaultError.msg = Object.values(err.errors)
-            .map((item) => item === null || item === void 0 ? void 0 : item.message)
+            .map(item => item.message)
             .join(",");
     }
-    if (err.name = 'CastError') {
+    if (err.name === 'CastError') {
         defaultError.statusCode = 400;
-        defaultError.msg = `Resourse not found. Invalid :${err.path}`;
+        defaultError.msg = `Resource not found. Invalid: ${err.path}`;
     }
     if (err.code && err.code === 11000) {
         defaultError.statusCode = 400;
@@ -37,7 +37,6 @@ const errorHandlerMiddleware = (err, req, res, next) => {
     }
     res
         .status(defaultError.statusCode)
-        .json({ message: defaultError.msg, sucess: false });
+        .json({ message: defaultError.msg, success: false });
 };
 exports.errorHandlerMiddleware = errorHandlerMiddleware;
-//# sourceMappingURL=index.middleware.js.map

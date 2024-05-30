@@ -32,4 +32,3 @@ app.use("/api/", note_route_1.default);
 app.use("*", index_middleware_1.notFoundMiddleware);
 app.use(index_middleware_1.errorHandlerMiddleware);
 exports.default = app;
-//# sourceMappingURL=app.js.map
